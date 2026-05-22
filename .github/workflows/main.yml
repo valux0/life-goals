@@ -22,4 +22,5 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/lifegoals:latest
+          # He puesto tu usuario valux0 directamente aquí para evitar errores de formato
+          tags: valux0/lifegoals:latest
