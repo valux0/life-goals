@@ -1,14 +1,14 @@
 <div class="container">
   <div class="input-section">
-    <p>Use this form below to add a new life goal</p>
-    <input [(ngModel)]="nuevaMeta" placeholder="go to moon" />
-    <button (click)="agregar()">add an item</button>
+    <p>Agrega una meta!</p>
+    <input [(ngModel)]="nuevaMeta" placeholder="escribe tu meta" />
+    <button (click)="agregar()">guardar</button>
   </div>
 
   <div class="list-section">
-    <p>Your goal list ({{ listaMetas.length }})</p>
+    <p>Tu lista de metas ({{ listaMetas.length }})</p>
     <div *ngFor="let m of listaMetas" class="card">
-      <button class="btn-delete" (click)="eliminar(m.id!)">delete</button>
+      <button class="btn-delete" (click)="eliminar(m.id!)">borrar</button>
       <p>{{ m.meta }}</p>
     </div>
   </div>
