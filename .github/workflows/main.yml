@@ -22,4 +22,9 @@ jobs:
         with:
           context: .
           push: true
+          # Usamos tu usuario directamente para evitar errores de tag
           tags: valux0/lifegoals:latest
+
+      - name: Notificar a Render
+        # Este comando le avisa a Render que ya hay una imagen nueva lista
+        run: curl ${{ secrets.RENDER_DEPLOY_HOOK }}
